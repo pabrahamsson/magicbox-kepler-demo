@@ -63,7 +63,12 @@ const CONFIG = {
   // Optional: Enables reading mapbox token from environment variable
   plugins: [
     new webpack.EnvironmentPlugin(['MapboxAccessToken'])
-  ]
+  ],
+
+  devServer: {
+    compress: true,
+    disableHostCheck: true
+  }
 };
 
 // This line enables bundling against src in this repo rather than installed deck.gl module
